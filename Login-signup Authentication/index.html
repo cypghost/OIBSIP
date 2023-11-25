@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In | Sign Up Autentication</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bcryptjs/dist/bcrypt.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <form id="loginForm" onsubmit="login(event)">
+            <h2>Log In</h2>
+            <div class="input-field">
+                <input type="text" name="Email" id="Email">
+                <label>Email</label>
+            </div>
+            <div class="input-field">
+                <input type="password" name="Password" id="Password">
+                <label>Password</label>
+            </div>
+            <div class="forget">
+                <label for="remember">
+                    <input type="checkbox" id="remember">
+                    <p>Remember Me</p>
+                </label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit">Log In</button>
+            <div class="register">
+                <p>Don't have an account? <a href="#" onclick="toggleForm('register')">Register</a></p>
+            </div>
+        </form>
+        <form id="registerForm" onsubmit="register(event)" style="display: none;">
+            <h2>Sign Up</h2>
+            <div class="input-field">
+                <input type="text" name="name" id="name" required>
+                <label>Name</label>
+            </div>
+            <div class="input-field">
+                <input type="text" name="email" id="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-field">
+                <input type="password" name="password" id="password" required>
+                <label>Password</label>
+            </div>
+            <div class="input-field">
+                <input type="password" name="confirm_password" id="confirm_password" required>
+                <label>Confirm Password</label>
+            </div>
+            <div class="forget">
+                <label for="remember">
+                    <input type="checkbox" id="remember">
+                    <p>Remember Me</p>
+                </label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit">Register</button>
+            <div class="register">
+                <p>Don't have an account? <a href="#" onclick="toggleForm('login')">Log In</a></p>
+            </div>
+        </form>
+        <div id="secured" style="display: none;">
+            <h2>WELCOME <span id="userName"></span></h2>
+        </div>
+        <p id="loader" style="display:none; color:white;">Loading...</p>
+    </div>   
+</body>
+</html>
+
