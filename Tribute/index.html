@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Carl Sagan Tribute</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#fff" },
+                shape: { type: "circle", stroke: { width: 0, color: "#000000" }, polygon: { nb_sides: 5 }, image: { src: "img/github.svg", width: 100, height: 100 } },
+                opacity: { value: 0.5, random: false, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
+                size: { value: 3, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
+                line_linked: { enable: true, distance: 150, color: "#fff", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
+                modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
+            },
+            retina_detect: true
+        });
+    </script>
+
+    <header class="parallax">
+        <h1>Carl Sagan: Explorer of the Cosmos</h1>
+        <p>Unveiling the Mysteries of the Universe</p>
+    </header>
+
+    <section id="intro" class="fade-in">
+        <h2>Who is Carl Sagan?</h2>
+        <p>Carl Sagan, an American astronomer, astrophysicist, and science communicator, captivated the world with his passion for exploring the cosmos. Born on November 9, 1934, Sagan played a key role in advancing our understanding of the universe and making complex scientific concepts accessible to the public.</p>
+    </section>
+
+    <section id="gallery" class="fade-in">
+        <h2>Wisdom from Carl</h2> 
+        <img src="wallpaperflare.com_wallpaper.jpg" alt="Carl Sagan Quote">
+    </section>
+
+    <section id="closing" class="fade-in">
+        <h2>Closing Thoughts</h2>
+        <p>Carl Sagan's legacy continues to inspire countless individuals to explore the wonders of the cosmos. As we gaze at the stars, let us remember his words and carry the torch of curiosity and scientific inquiry forward into the future.</p>
+    </section>
+
+    <footer>
+        <p>Explore the Cosmos and Keep Looking Up!</p>
+    </footer>
+</body>
+</html>
