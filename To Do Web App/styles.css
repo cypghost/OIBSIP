@@ -1,0 +1,128 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f7f7f7 url('Nature.jpg') repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 80px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('Nature.jpg') repeat;
+    filter: blur(3px);
+    z-index: -1;
+}
+
+.container:hover {
+    transform: scale(1.02) rotate(1deg);
+}
+
+
+h1 {
+    text-align: center;
+    color: #ecf0f1;
+    letter-spacing: 2px;
+}
+
+h2 {
+    text-align: center;
+    color: #ecf0f1;
+    letter-spacing: 2px;
+}
+
+#taskForm {
+    display: flex;
+    margin-bottom: 20px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+#taskInput {
+    flex-grow: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ecf0f1;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#taskInput:focus {
+    background-color: #bdc3c7;
+}
+
+button {
+    padding: 12px;
+    background: linear-gradient(to bottom, #2ecc71, #27ae60);
+    color: #ecf0f1;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #27ae60, #21935e);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: linear-gradient(to bottom, #ecf0f1, #bdc3c7);
+    border: 1px solid #bdc3c7;
+    margin: 10px 0;
+    padding: 14px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+li:hover {
+    transform: scale(1.03) rotate(1deg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.completed {
+    background: linear-gradient(to bottom, #d0e9c6, #a9dfbf);
+    border-color: #a9dfbf;
+    color: #2e7d32;
+}
+
+.completed:hover {
+    background: linear-gradient(to bottom, #a9dfbf, #8abf9e);
+}
+
+.date {
+    color: #888;
+    font-size: 12px;
+    margin-left: 10px;
+    opacity: 0.8;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
