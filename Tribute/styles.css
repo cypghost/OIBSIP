@@ -63,26 +63,6 @@ header::before {
     z-index: -1;
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding: 2em;
-    z-index: 1000;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-    margin: 0 1em;
-    transition: color 0.3s ease-in-out;
-}
-
-nav a:hover {
-    color: #ffcc00;
-}
-
 section {
     margin: 2em;
     text-align: center;
